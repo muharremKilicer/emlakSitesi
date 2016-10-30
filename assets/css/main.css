@@ -1,0 +1,249 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,latin-ext);
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #edeeef;
+  height: 100%;
+  padding-top: 50px;
+}
+
+/* Navbar Bolumu */
+.navbar-default {
+  background: #1976D2;
+  padding: 0 3% 0 3%;
+  border: 0px;
+}
+
+/* Slogan rengi */
+.navbar-default .navbar-brand {
+  font-size: 23px;
+  color: #fff;
+}
+
+/* Linklerin rengi */
+.navbar-default .navbar-nav > li > a {
+  font-size: 17px;
+  color: #dae9ff;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #fff;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #4a85dd;
+  background-color: #edeeef;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+.navbar-default .navbar-nav .dropdown > ul li a {
+  font-size: 17px;
+}
+
+/*  Carousel Slider Bolumu*/
+.fill img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+}
+
+/*  Orta Arama Bolumu */
+.ortaAramaKapsul {
+  padding-top: 15px;
+}
+
+.ortaArama {
+  background: #fff;
+  padding: 20px;
+}
+
+.nav-tabs li a {
+  border-radius: 0px;
+  font-size: 17px;
+  background: #0288D1 !important;
+  color: #fff;
+}
+.nav-tabs li a:focus {
+  color: #212121 !important;
+}
+.nav-tabs li a:visited {
+  color: #ff0000 !important;
+}
+
+.ortaAraBtn {
+  font-size: 22px;
+  border-radius: 0px;
+}
+
+/*  Orta Ilanlar Bolumu */
+.panel-heading h4 {
+  color: #212121;
+  text-align: center;
+}
+
+.panel-body {
+  padding: 0px;
+}
+.panel-body p {
+  padding: 10px 10px 0px 10px;
+  text-align: left;
+  font-size: 16px;
+}
+.panel-body h3 {
+  padding: 10px;
+  text-align: left;
+  font-size: 23px;
+}
+.panel-body img {
+  width: 100%;
+}
+.panel-body p {
+  color: #666666;
+}
+
+.table {
+  margin-top: 0px;
+}
+.table .table-bilgi {
+  color: #727272;
+  text-align: right;
+  font-weight: normal;
+}
+
+.panel-btn-detay {
+  border-radius: 0px;
+  font-size: 17px;
+  color: #fff;
+}
+
+/*  Footer Bolumu */
+.footer-bilgiler {
+  background: #262626;
+  padding-bottom: 30px;
+  padding-top: 15px;
+  border-top: 5px solid #455A64;
+  color: #fff;
+}
+
+.footer-menu {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+.footer-menu li {
+  padding: 5px 0px 5px 0px;
+}
+
+.footer-sosyal {
+  background: #333333;
+  padding: 5px 0px 5px 0px;
+}
+
+.sosyal-medya {
+  text-align: right;
+  padding: 5px 0px 5px 0px;
+  color: #fff;
+}
+.sosyal-medya i {
+  margin-right: 5px;
+}
+
+/* Modal Bolumu */
+body.modal-open {
+  overflow: inherit;
+  padding-right: 0 !important;
+}
+
+#uyeOlModal .input-group, #girisYapModal .input-group {
+  margin-bottom: 15px;
+}
+
+.modal-footer .btn-primary {
+  border-radius: 0px;
+  font-size: 17px;
+  color: #fff;
+}
+
+/*-------------------------------------------------*/
+/* Katalog Bolumu */
+.ilan-sonuc {
+  background: #455A64;
+  color: #fff;
+  padding: 15px 0px 30px 0px;
+  text-align: center;
+}
+
+.ilan-sayfa {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.arama-detay {
+  background: #F6F6F6;
+  border: 1px solid #C3C3C3;
+  margin-right: 15px;
+  margin-left: -15px;
+}
+.arama-detay h4 {
+  margin-bottom: 15px;
+  color: #212121;
+}
+
+.arama-sonuclar {
+  background: #ffffff;
+  border: 1px solid #C3C3C3;
+  margin-right: -15px;
+  margin-left: 15px;
+}
+.arama-sonuclar .sonuc-bilgi {
+  font-size: 20px;
+  padding: 15px 0px 0px 0px;
+}
+.arama-sonuclar .sonuc-bilgi span {
+  color: #1976D2;
+}
+.arama-sonuclar .sonuc-secim {
+  padding: 15px 0px 0px 0px;
+  text-align: right;
+}
+
+.arama-detay-kutu {
+  margin-top: 15px;
+}
+.arama-detay-kutu .form-group {
+  padding: 0px;
+}
+.arama-detay-kutu .form-group input {
+  border-radius: 2px;
+}
+.arama-detay-kutu .form-group-secim span {
+  color: #969696;
+}
+
+/* Burasi nasil calisiyor. Arastir? */
+@media (max-width: 768px) {
+  .arama-detay {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+
+  .arama-sonuclar {
+    margin-top: 15px;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}
+.sonuclar-table tbody tr td {
+  vertical-align: middle;
+}
+
+.sonuc-kat {
+  text-align: center;
+}
+
+/*# sourceMappingURL=main.css.map */

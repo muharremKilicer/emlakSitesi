@@ -1,0 +1,304 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,latin-ext);
+
+$font-family: 'Open Sans', sans-serif;
+$body-bg: #edeeef;
+
+$navbar-bg: #1976D2;
+$navbar-padding: 0 3% 0 3%;
+
+$carousel-height: 520px;
+
+$ortaArama-bg: #fff;
+$footer-bg: #262626;
+$ilan-sonuc-bg: #455A64;
+$arama-detay-bg: #F6F6F6;
+$arama-sonuclar-bg: #ffffff;
+
+@mixin buttonPrimary {
+  border-radius: 0px;
+  font-size: 17px;
+  color: #fff;
+}
+
+@mixin listClear {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+@mixin buttonPrimary-aLink {
+	a{
+		border-radius: 0px;
+	  	font-size: 17px;
+	  	background: #0288D1 !important;
+	  	color: #fff;
+	}
+	a:focus{
+		color: #212121 !important
+	}
+	a:visited{
+		color: #ff0000 !important
+	}
+}
+
+@mixin panel-heading {
+	h4{
+	  color: #212121;
+	  text-align: center;
+	}
+}
+
+@mixin panel-body {
+	padding: 0px;
+	p{
+	  padding: 10px 10px 0px 10px;
+	  text-align: left;
+	  font-size: 16px
+	}
+	h3{
+	  padding: 10px;
+	  text-align: left;
+	  font-size: 23px
+	}
+	img{
+		width: 100%;
+	}
+	p{
+		color: #666666;
+	}
+}
+
+@mixin panel-table {
+	margin-top: 0px;
+  	.table-bilgi{
+	  color: #727272;
+	  text-align: right;
+	  font-weight: normal;
+	}
+}
+
+body {
+  font-family: $font-family;
+  background: $body-bg;	
+  height: 100%;
+  padding-top: 50px;
+}
+
+/* Navbar Bolumu */
+.navbar-default {
+  	background: $navbar-bg;
+  	padding: $navbar-padding;
+  	border: 0px;
+}
+
+/* Slogan rengi */
+.navbar-default .navbar-brand {
+	font-size: 23px;
+    color: #fff;
+}
+
+/* Linklerin rengi */
+.navbar-default .navbar-nav > li > a {
+	font-size: 17px;
+	    color: #dae9ff;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #fff;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #4a85dd;
+    background-color: #edeeef;
+}
+.navbar-default .navbar-toggle .icon-bar{
+    background-color: #fff;
+}
+
+.navbar-default .navbar-nav .dropdown > ul li a{
+	font-size: 17px;
+}
+
+/*  Carousel Slider Bolumu*/
+.fill img{
+  width: 100%;
+  height: $carousel-height;
+  object-fit: cover;
+}
+
+/*  Orta Arama Bolumu */
+.ortaAramaKapsul{
+  padding-top: 15px;
+}
+
+.ortaArama{
+  background: $ortaArama-bg;	
+  padding: 20px;
+}
+
+.nav-tabs li{
+  @include buttonPrimary-aLink;
+}
+
+.ortaAraBtn{
+	font-size: 22px;
+	border-radius: 0px;
+}
+
+/*  Orta Ilanlar Bolumu */
+.panel-heading{
+  @include panel-heading;
+}
+
+.panel-body {
+  @include panel-body;
+}
+
+.table{
+  @include panel-table;
+
+}
+
+.panel-btn-detay{
+  @include buttonPrimary;
+}
+
+
+/*  Footer Bolumu */
+.footer-bilgiler{
+  background: $footer-bg;
+  padding-bottom: 30px;
+  padding-top: 15px;
+  border-top: 5px solid #455A64;
+  color: #fff;
+}
+
+.footer-menu{
+  @include listClear;
+  li{
+  padding: 5px 0px 5px 0px
+  }
+}
+
+.footer-sosyal{
+  background: #333333;
+  padding: 5px 0px 5px 0px;
+}
+
+.sosyal-medya{
+  text-align: right;
+  padding: 5px 0px 5px 0px;
+  color: #fff;
+  i{
+	margin-right: 5px;
+  }
+}
+
+/* Modal Bolumu */
+body.modal-open {
+  overflow: inherit;
+  padding-right: 0 !important;
+}
+
+#uyeOlModal, #girisYapModal{
+	.input-group{
+		margin-bottom: 15px;
+	}
+}
+
+.modal-footer .btn-primary{
+  @include buttonPrimary;
+}
+
+/*-------------------------------------------------*/
+/* Katalog Bolumu */
+.ilan-sonuc{
+  background: $ilan-sonuc-bg;	
+  color: #fff;
+  padding: 15px 0px 30px 0px;
+  text-align: center;
+}
+
+.ilan-sayfa{
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.arama-detay{
+  background: $arama-detay-bg;	
+  border: 1px solid #C3C3C3;
+  margin-right: 15px;
+  margin-left: -15px;
+  h4{
+  	margin-bottom: 15px;
+  	color: #212121;
+  }
+}
+
+.arama-sonuclar{
+  background: $arama-sonuclar-bg;	
+  border: 1px solid #C3C3C3;
+  margin-right: -15px;
+  margin-left: 15px;
+  .sonuc-bilgi{
+	font-size: 20px;
+	padding: 15px 0px 0px 0px;
+	span{
+  		color: #1976D2;
+	}
+  }
+
+  .sonuc-secim{
+  	padding: 15px 0px 0px 0px;
+  	text-align: right;
+  }
+}
+
+.arama-detay-kutu{
+	margin-top: 15px;
+
+	.form-group{
+		padding:0px;
+		input{
+		  	border-radius: 2px;
+		}
+	}
+
+	.form-group-secim{
+		span{
+		  color: #969696;
+		}
+	} 
+}
+
+
+
+/* Burasi nasil calisiyor. Arastir? */
+$breakpoint-tablet: 768px;
+@media (max-width: $breakpoint-tablet) {
+	.arama-detay{
+	  margin-right: 15px;
+	  margin-left: 15px;
+	}
+
+	.arama-sonuclar{
+	  margin-top: 15px;
+	  margin-right: 15px;
+	  margin-left: 15px;
+	}
+
+}
+
+.sonuclar-table{
+	tbody{
+		tr{
+			td{
+				vertical-align: middle;
+			}
+		}
+	}
+} 
+
+.sonuc-kat{text-align: center}

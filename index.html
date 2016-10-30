@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>Emlak Sitesi HTML-CSS</title>
+		<!-- Bootstrap -->
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+		<link href="assets/css/main.css" rel="stylesheet">
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="index.html">Emlak Sitesi</a>
+
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav navbar-sol">
+	        <li><a href="liste.html"><i class="glyphicon glyphicon-th-list"></i> Liste Görünümü</a></li>
+	        <li><a href="katalog.html"><i class="glyphicon glyphicon-th-large"></i> Katalog Görünümü</a></li>
+	        <li><a href="harita.html"><i class="glyphicon glyphicon-map-marker"></i> Harita</a></li>
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="uyeol2.php" data-toggle="modal" data-target="#uyeOlModal">Üye Ol</a></li>
+	        <li><a href="#" data-toggle="modal" data-target="#girisYapModal">Giriş Yap</a></li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+
+	<!-- Header Carousel -->
+	<div id="myCarousel" class="carousel slide">
+	    <!-- Indicators -->
+	    <ol class="carousel-indicators">
+	        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	        <li data-target="#myCarousel" data-slide-to="1"></li>
+	        <li data-target="#myCarousel" data-slide-to="2"></li>
+	    </ol>
+
+	    <!-- Wrapper for slides -->
+	    <div class="carousel-inner">
+	        <div class="item">
+	            <div class="fill"><img src="img/slide01.jpg" alt=""></div>
+	            <div class="carousel-caption">
+	                <h2>Reklam 1</h2>
+	            </div>
+	        </div>
+	        <div class="item">
+	            <div class="fill"><img src="img/slide02.jpg" alt=""></div>
+	            <div class="carousel-caption">
+	                <h2>Reklam 2</h2>
+	            </div>
+	        </div>
+	        <div class="item active">
+	            <div class="fill"><img src="img/slide03.jpg" alt=""></div>
+	            <div class="carousel-caption">
+	                <h2>Reklam 3</h2>
+	            </div>
+	        </div>
+	    </div>
+
+	    <!-- Controls -->
+	    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+	        <span class="icon-prev"></span>
+	    </a>
+	    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+	        <span class="icon-next"></span>
+	    </a>
+	</div>
+
+	<div class="container ortaAramaKapsul">
+	  <div class="row">
+	    <ul class="nav nav-tabs">
+	      <li><a data-toggle="tab" href="#hizliAra">Hızlı Ara</a></li>
+	      <li><a data-toggle="tab" href="#detayliAra">Detaylı Ara</a></li>
+	    </ul>
+	    <div class="tab-content">
+	      <div id="hizliAra" class="tab-pane fade in active">
+	        <div class="container ortaArama">
+	          <div class="col-sm-2">
+	            <div class="form-group">
+	              <select id="pref-perpage" class="form-control ara-secim">
+	                <option selected="selected" value="10">Türkiye Geneli</option>
+	                <option value="15">İstanbul</option>
+	                <option value="20">Ankara</option>
+	              </select>
+	            </div>
+	          </div>
+	          <div class="col-sm-2">
+	            <div class="form-group">
+	              <select id="pref-perpage" class="form-control">
+	                <option selected="selected" value="10">Konut</option>
+	                <option value="15">İşyeri</option>
+	                <option value="20">Arsa</option>
+	              </select>
+	            </div>
+	          </div>
+	          <div class="col-sm-6">
+	            <div class="form-group">
+	              <input type="text" class="form-control ara-secim" placeholder="Aranacak Kelime Girin">
+	            </div>
+	          </div>
+	          <div class="col-sm-2">
+	            <div class="form-group">
+	              <select id="pref-perpage" class="form-control">
+	                <option selected="selected" value="10">En Az Fiyat</option>
+	                <option selected="selected" value="10">En Çok Fiyat</option>
+	              </select>
+	            </div>
+	          </div>
+	              <div class="col-sm-12">
+	              <button type="submit" class="btn btn-success btn-block ortaAraBtn">Ara</button>
+	              </div>
+	        </div>
+	      </div>
+	      <div id="detayliAra" class="tab-pane fade">
+	        <div class="container ortaArama">
+	          <div class="col-sm-3">
+	            <div class="form-group">
+	              <select id="pref-perpage" class="form-control ara-secim">
+	                <option selected="selected" value="10">Türkiye Geneli</option>
+	                <option value="15">İstanbul (Avr.)</option>
+	                <option value="15">İstanbul (And.)</option>
+	                <option value="20">Ankara</option>
+	              </select>
+	            </div>
+	          </div>
+	          <div class="col-sm-3">
+	            <div class="form-group">
+	              <select id="pref-perpage" class="form-control ara-secim">
+	                <option selected="selected" value="10">İlçe</option>
+	                <option value="15">Arnavutköy</option>
+	                <option value="20">Ataşehir</option>
+	                <option value="20">Avcılar</option>
+	              </select>
+	            </div>
+	          </div>
+	          <div class="col-sm-3">
+	            <div class="form-group">
+	              <select id="pref-perpage" class="form-control ara-secim">
+	                <option selected="selected" value="10">Mahalle</option>
+	                <option value="15">Arnavutköy</option>
+	                <option value="20">Baklalı</option>
+	                <option value="20">Balaban</option>
+	              </select>
+	            </div>
+	          </div>
+	          <div class="col-sm-3">
+	            <div class="form-group">
+	              <select id="pref-perpage" class="form-control">
+	                <option selected="selected" value="10">Konut</option>
+	                <option value="15">İşyeri</option>
+	                <option value="20">Arsa</option>
+	              </select>
+	            </div>
+	          </div>
+	          <div class="col-sm-2">
+	            <div class="form-group">
+	              <select id="pref-perpage" class="form-control">
+	                <option selected="selected" value="10">En Az Kaç m2</option>
+	              </select>
+	            </div>
+	          </div>
+	          <div class="col-sm-2">
+	            <div class="form-group">
+	              <select id="pref-perpage" class="form-control">
+	                <option selected="selected" value="10">En Çok Kaç m2</option>
+	              </select>
+	            </div>
+	          </div>
+	          <div class="col-sm-6">
+	            <div class="form-group">
+	              <input type="text" class="form-control ara-secim" placeholder="Aranacak Kelime Girin">
+	            </div>
+	          </div>
+	          <div class="col-sm-2">
+	            <div class="form-group">
+	              <select id="pref-perpage" class="form-control">
+	                <option selected="selected" value="10">En Az Fiyat</option>
+	                <option selected="selected" value="10">En Çok Fiyat</option>
+	              </select>
+	            </div>
+	          </div>
+	              <div class="col-sm-12">
+	              <button type="submit" class="btn btn-danger btn-block ortaAraBtn">Ara</button>
+	              </div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="container">
+	  <div class="row">
+	    <div class="col-lg-10">
+	     <h1 class="page-header">
+	      Öne Çıkan İlanlar
+	     </h1>
+	    </div>
+	    <div class="col-md-3">
+	      <div class="panel panel-default">
+	        <div class="panel-heading">
+	          <h4>İlan Baslik</h4>
+	        </div>
+	        <div class="panel-body">
+	          <img src="img/res.jpg" alt="">
+	          <table class = "table table-striped" >
+	             <tbody class="">
+	              <tr>
+	                <th>Sat / Kir</th>
+	                <th class="table-bilgi">Kiralık</th>
+	              </tr>
+	              <tr>
+	                <th>Fiyat</th>
+	                <th class="table-bilgi">999 TL</th>
+	              </tr>
+	              <tr>
+	                <th>Alan m2</th>
+	                <th class="table-bilgi">99 m2</th>
+	              </tr>
+	              <tr>
+	                <th>İl</th>
+	                <th class="table-bilgi">İstanbul</th>
+	              </tr>
+	              <tr>
+	                <th>İlçe</th>
+	                <th class="table-bilgi">GOP</th>
+	              </tr>
+	             </tbody>
+	          </table>
+	          <a href="detay.php?ilan_id=<?=$ilanid?>" class="btn btn-primary btn-block panel-btn-detay">Tüm Detaylar</a>
+	        </div>
+	      </div>
+	    </div>  
+	    <div class="col-md-3">
+	      <div class="panel panel-default">
+	        <div class="panel-heading">
+	          <h4>İlan Baslik</h4>
+	        </div>
+	        <div class="panel-body">
+	          <img src="img/res.jpg" alt="">
+	          <table class = "table table-striped" >
+	             <tbody class="">
+	              <tr>
+	                <th>Sat / Kir</th>
+	                <th class="table-bilgi">Kiralık</th>
+	              </tr>
+	              <tr>
+	                <th>Fiyat</th>
+	                <th class="table-bilgi">999 TL</th>
+	              </tr>
+	              <tr>
+	                <th>Alan m2</th>
+	                <th class="table-bilgi">99 m2</th>
+	              </tr>
+	              <tr>
+	                <th>İl</th>
+	                <th class="table-bilgi">İstanbul</th>
+	              </tr>
+	              <tr>
+	                <th>İlçe</th>
+	                <th class="table-bilgi">GOP</th>
+	              </tr>
+	             </tbody>
+	          </table>
+	          <a href="detay.php?ilan_id=<?=$ilanid?>" class="btn btn-primary btn-block panel-btn-detay">Tüm Detaylar</a>
+	        </div>
+	      </div>
+	    </div>  
+	    <div class="col-md-3">
+	      <div class="panel panel-default">
+	        <div class="panel-heading">
+	          <h4>İlan Baslik</h4>
+	        </div>
+	        <div class="panel-body">
+	          <img src="img/res.jpg" alt="">
+	          <table class = "table table-striped" >
+	             <tbody class="">
+	              <tr>
+	                <th>Sat / Kir</th>
+	                <th class="table-bilgi">Kiralık</th>
+	              </tr>
+	              <tr>
+	                <th>Fiyat</th>
+	                <th class="table-bilgi">999 TL</th>
+	              </tr>
+	              <tr>
+	                <th>Alan m2</th>
+	                <th class="table-bilgi">99 m2</th>
+	              </tr>
+	              <tr>
+	                <th>İl</th>
+	                <th class="table-bilgi">İstanbul</th>
+	              </tr>
+	              <tr>
+	                <th>İlçe</th>
+	                <th class="table-bilgi">GOP</th>
+	              </tr>
+	             </tbody>
+	          </table>
+	          <a href="detay.php?ilan_id=<?=$ilanid?>" class="btn btn-primary btn-block panel-btn-detay">Tüm Detaylar</a>
+	        </div>
+	      </div>
+	    </div>  
+	    <div class="col-md-3">
+	      <div class="panel panel-default">
+	        <div class="panel-heading">
+	          <h4>İlan Baslik</h4>
+	        </div>
+	        <div class="panel-body">
+	          <img src="img/res.jpg" alt="">
+	          <table class = "table table-striped" >
+	             <tbody class="">
+	              <tr>
+	                <th>Sat / Kir</th>
+	                <th class="table-bilgi">Kiralık</th>
+	              </tr>
+	              <tr>
+	                <th>Fiyat</th>
+	                <th class="table-bilgi">999 TL</th>
+	              </tr>
+	              <tr>
+	                <th>Alan m2</th>
+	                <th class="table-bilgi">99 m2</th>
+	              </tr>
+	              <tr>
+	                <th>İl</th>
+	                <th class="table-bilgi">İstanbul</th>
+	              </tr>
+	              <tr>
+	                <th>İlçe</th>
+	                <th class="table-bilgi">GOP</th>
+	              </tr>
+	             </tbody>
+	          </table>
+	          <a href="detay.php?ilan_id=<?=$ilanid?>" class="btn btn-primary btn-block panel-btn-detay">Tüm Detaylar</a>
+	        </div>
+	      </div>
+	    </div>  
+	  </div>
+	</div>
+
+	<div class="container">
+	  <div class="row">
+	    <div class="col-lg-10">
+	     <h1 class="page-header">
+	      En Yeni İlanlar
+	     </h1>
+	    </div>
+	    <div class="col-md-3 ilan">
+	      <div class="panel panel-default">
+	        <div class="panel-heading">
+	          <h4> İlan 360</h4>
+	        </div>
+	        <div class="panel-body">
+	          <img src="img/res.jpg" alt="">
+	          <table class = "table table-striped">
+	             <tbody>
+	              <tr>
+	                <th>Sat / Kir</th>
+	                <th class="table-bilgi">Kiralık</th>
+	              </tr>
+	              <tr>
+	                <th>Fiyat</th>
+	                <th class="table-bilgi">2350 TL</th>
+	              </tr>
+	              <tr>
+	                <th>Alan m2</th>
+	                <th class="table-bilgi">135 m2</th>
+	              </tr>
+	              <tr>
+	                <th>İl</th>
+	                <th class="table-bilgi">İstanbul</th>
+	              </tr>
+	              <tr>
+	                <th>İlçe</th>
+	                <th class="table-bilgi">Arnavutköy</th>
+	              </tr>
+	             </tbody>
+	          </table>
+	          <a href="#" class="btn btn-primary btn-block panel-btn-detay">Tüm Detaylar</a>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="col-md-3 ilan">
+	      <div class="panel panel-default">
+	        <div class="panel-heading">
+	          <h4> İlan 360</h4>
+	        </div>
+	        <div class="panel-body">
+	          <img src="img/res.jpg" alt="">
+	          <table class = "table table-striped">
+	             <tbody>
+	              <tr>
+	                <th>Sat / Kir</th>
+	                <th class="table-bilgi">Kiralık</th>
+	              </tr>
+	              <tr>
+	                <th>Fiyat</th>
+	                <th class="table-bilgi">2350 TL</th>
+	              </tr>
+	              <tr>
+	                <th>Alan m2</th>
+	                <th class="table-bilgi">135 m2</th>
+	              </tr>
+	              <tr>
+	                <th>İl</th>
+	                <th class="table-bilgi">İstanbul</th>
+	              </tr>
+	              <tr>
+	                <th>İlçe</th>
+	                <th class="table-bilgi">Arnavutköy</th>
+	              </tr>
+	             </tbody>
+	          </table>
+	          <a href="#" class="btn btn-primary btn-block panel-btn-detay">Tüm Detaylar</a>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="col-md-3 ilan">
+	      <div class="panel panel-default">
+	        <div class="panel-heading">
+	          <h4> İlan 360</h4>
+	        </div>
+	        <div class="panel-body">
+	          <img src="img/res.jpg" alt="">
+	          <table class = "table table-striped">
+	             <tbody>
+	              <tr>
+	                <th>Sat / Kir</th>
+	                <th class="table-bilgi">Kiralık</th>
+	              </tr>
+	              <tr>
+	                <th>Fiyat</th>
+	                <th class="table-bilgi">2350 TL</th>
+	              </tr>
+	              <tr>
+	                <th>Alan m2</th>
+	                <th class="table-bilgi">135 m2</th>
+	              </tr>
+	              <tr>
+	                <th>İl</th>
+	                <th class="table-bilgi">İstanbul</th>
+	              </tr>
+	              <tr>
+	                <th>İlçe</th>
+	                <th class="table-bilgi">Arnavutköy</th>
+	              </tr>
+	             </tbody>
+	          </table>
+	          <a href="#" class="btn btn-primary btn-block panel-btn-detay">Tüm Detaylar</a>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="col-md-3 ilan">
+	      <div class="panel panel-default">
+	        <div class="panel-heading">
+	          <h4> İlan 360</h4>
+	        </div>
+	        <div class="panel-body">
+	          <img src="img/res.jpg" alt="">
+	          <table class = "table table-striped">
+	             <tbody>
+	              <tr>
+	                <th>Sat / Kir</th>
+	                <th class="table-bilgi">Kiralık</th>
+	              </tr>
+	              <tr>
+	                <th>Fiyat</th>
+	                <th class="table-bilgi">2350 TL</th>
+	              </tr>
+	              <tr>
+	                <th>Alan m2</th>
+	                <th class="table-bilgi">135 m2</th>
+	              </tr>
+	              <tr>
+	                <th>İl</th>
+	                <th class="table-bilgi">İstanbul</th>
+	              </tr>
+	              <tr>
+	                <th>İlçe</th>
+	                <th class="table-bilgi">Arnavutköy</th>
+	              </tr>
+	             </tbody>
+	          </table>
+	          <a href="#" class="btn btn-primary btn-block panel-btn-detay">Tüm Detaylar</a>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="col-md-3 ilan">
+	      <div class="panel panel-default">
+	        <div class="panel-heading">
+	          <h4> İlan 360</h4>
+	        </div>
+	        <div class="panel-body">
+	          <img src="img/res.jpg" alt="">
+	          <table class = "table table-striped">
+	             <tbody>
+	              <tr>
+	                <th>Sat / Kir</th>
+	                <th class="table-bilgi">Kiralık</th>
+	              </tr>
+	              <tr>
+	                <th>Fiyat</th>
+	                <th class="table-bilgi">2350 TL</th>
+	              </tr>
+	              <tr>
+	                <th>Alan m2</th>
+	                <th class="table-bilgi">135 m2</th>
+	              </tr>
+	              <tr>
+	                <th>İl</th>
+	                <th class="table-bilgi">İstanbul</th>
+	              </tr>
+	              <tr>
+	                <th>İlçe</th>
+	                <th class="table-bilgi">Arnavutköy</th>
+	              </tr>
+	             </tbody>
+	          </table>
+	          <a href="#" class="btn btn-primary btn-block panel-btn-detay">Tüm Detaylar</a>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="col-md-3 ilan">
+	      <div class="panel panel-default">
+	        <div class="panel-heading">
+	          <h4> İlan 360</h4>
+	        </div>
+	        <div class="panel-body">
+	          <img src="img/res.jpg" alt="">
+	          <table class = "table table-striped">
+	             <tbody>
+	              <tr>
+	                <th>Sat / Kir</th>
+	                <th class="table-bilgi">Kiralık</th>
+	              </tr>
+	              <tr>
+	                <th>Fiyat</th>
+	                <th class="table-bilgi">2350 TL</th>
+	              </tr>
+	              <tr>
+	                <th>Alan m2</th>
+	                <th class="table-bilgi">135 m2</th>
+	              </tr>
+	              <tr>
+	                <th>İl</th>
+	                <th class="table-bilgi">İstanbul</th>
+	              </tr>
+	              <tr>
+	                <th>İlçe</th>
+	                <th class="table-bilgi">Arnavutköy</th>
+	              </tr>
+	             </tbody>
+	          </table>
+	          <a href="#" class="btn btn-primary btn-block panel-btn-detay">Tüm Detaylar</a>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="col-md-3 ilan">
+	      <div class="panel panel-default">
+	        <div class="panel-heading">
+	          <h4> İlan 360</h4>
+	        </div>
+	        <div class="panel-body">
+	          <img src="img/res.jpg" alt="">
+	          <table class = "table table-striped">
+	             <tbody>
+	              <tr>
+	                <th>Sat / Kir</th>
+	                <th class="table-bilgi">Kiralık</th>
+	              </tr>
+	              <tr>
+	                <th>Fiyat</th>
+	                <th class="table-bilgi">2350 TL</th>
+	              </tr>
+	              <tr>
+	                <th>Alan m2</th>
+	                <th class="table-bilgi">135 m2</th>
+	              </tr>
+	              <tr>
+	                <th>İl</th>
+	                <th class="table-bilgi">İstanbul</th>
+	              </tr>
+	              <tr>
+	                <th>İlçe</th>
+	                <th class="table-bilgi">Arnavutköy</th>
+	              </tr>
+	             </tbody>
+	          </table>
+	          <a href="#" class="btn btn-primary btn-block panel-btn-detay">Tüm Detaylar</a>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="col-md-3 ilan">
+	      <div class="panel panel-default">
+	        <div class="panel-heading">
+	          <h4> İlan 360</h4>
+	        </div>
+	        <div class="panel-body">
+	          <img src="img/res.jpg" alt="">
+	          <table class = "table table-striped">
+	             <tbody>
+	              <tr>
+	                <th>Sat / Kir</th>
+	                <th class="table-bilgi">Kiralık</th>
+	              </tr>
+	              <tr>
+	                <th>Fiyat</th>
+	                <th class="table-bilgi">2350 TL</th>
+	              </tr>
+	              <tr>
+	                <th>Alan m2</th>
+	                <th class="table-bilgi">135 m2</th>
+	              </tr>
+	              <tr>
+	                <th>İl</th>
+	                <th class="table-bilgi">İstanbul</th>
+	              </tr>
+	              <tr>
+	                <th>İlçe</th>
+	                <th class="table-bilgi">Arnavutköy</th>
+	              </tr>
+	             </tbody>
+	          </table>
+	          <a href="#" class="btn btn-primary btn-block panel-btn-detay">Tüm Detaylar</a>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<footer id="footer">
+		<div class="container-fuild footer-bilgiler">
+		  <div class="container">
+		    <div class="row">
+		      <div class="col-md-3">
+		        <div class="footer-baslik">
+		          <h3>Hizmetlerimiz</h3>
+		        </div>
+		        <div class="footer-bilgi">
+		          <ul class="footer-menu">
+		            <li>Satılık / Kiralık İlanlar</li>
+		            <li>Projeler</li>
+		            <li>Evimin Değeri</li>
+		            <li>Bölge Raporu</li>
+		            <li>Akıllı Haritalar</li>
+		          </ul>
+		        </div>
+		      </div>
+		      <div class="col-md-3">
+		        <div class="footer-baslik">
+		          <h3>Hakkımızda</h3>
+		        </div>
+		        <div class="footer-bilgi">
+		          <ul class="footer-menu">
+		            <li>Hakkımızda</li>
+		            <li>İnsan Kaynakları</li>
+		          </ul>
+		        </div>
+		      </div>
+		      <div class="col-md-3">
+		        <div class="footer-baslik">
+		          <h3>Kurumsal</h3>
+		        </div>
+		        <div class="footer-bilgi">
+		          <ul class="footer-menu">
+		            <li>Kullanım Koşulları</li>
+		            <li>Gizlilik Bildirimi</li>
+		            <li>Yardım</li>
+		          </ul>
+		        </div>
+		      </div>
+		      <div class="col-md-3">
+		        <div class="footer-baslik">
+		          <h3>İletişim</h3>
+		        </div>
+		        <div class="footer-bilgi">
+		          <ul class="footer-menu">
+		            <li> 0(555) 555 55 55</li>
+		            <li> Mesaj Gönder</li>
+		            <li> Facebook </li>
+		            <li> Twitter</li>
+		            <li> Instagram</li>
+		          </ul>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<div class="container-fuild footer-bilgiler footer-sosyal">
+		  <div class="container">
+		    <div class="row">
+		      <div class="col-sm-7">
+		        <h4 class="copyright">2016 Emlak Sitesi - Her hakkı saklıdır.</h4>
+		      </div>
+		      <div class="col-sm-5 sosyal-medya">
+		        <i class="fa fa-facebook-official fa-2x"></i>
+		        <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+		        <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+		        <i class="fa fa-youtube-square fa-2x" aria-hidden="true"></i>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</footer>
+
+	<!-- Modals -->
+	<div id="uyeOlModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Üye Ol</h4>
+	      </div>
+	      <div class="modal-body">
+	        <div class="input-group">
+	            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+	            <input type="text" class="form-control" value="" placeholder="Kullanıcı Adı">
+	        </div>
+	        <div class="input-group">
+	            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+	            <input type="text" class="form-control" value="" placeholder="E-Posta">
+	        </div>
+	        <div class="input-group">
+	            <span class="input-group-addon"><i class="glyphicon glyphicon-asterisk"></i></span>
+	            <input type="password" class="form-control" value="" placeholder="Şifre">
+	        </div>
+	        <div class="input-group">
+	            <span class="input-group-addon"><i class="glyphicon glyphicon-asterisk"></i></span>
+	            <input type="password" class="form-control" value="" placeholder="Şifre (Tekrar)">
+	        </div>
+	        <p class="kayit-onay">Kaydol düğmesine tıklayarak, <a href="">Çerez Kullanımı</a> dahil <a href="">Veri İlkemizi</a> okuduğunu ve <a href="">Koşullarımızı</a> kabul etmiş olursun.</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary btn-block">Kayıt Ol</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div id="girisYapModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Giriş Yap</h4>
+	      </div>
+	      <div class="modal-body">
+	        <div class="input-group">
+	            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+	            <input type="text" class="form-control" value="" placeholder="E-Posta">
+	        </div>
+	        <div class="input-group">
+	            <span class="input-group-addon"><i class="glyphicon glyphicon-asterisk"></i></span>
+	            <input type="password" class="form-control" value="" placeholder="Şifre">
+	        </div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary btn-block">Giriş</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+		<!-- Scripts -->
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="assets/js/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="assets/js/bootstrap.min.js"></script>
+	</body>
+</html>
