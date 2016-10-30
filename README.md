@@ -5,6 +5,6 @@ Anasayfa, Katalog Görünümü, Liste Görünümü, Harita Görünümü, Üye Ol
 #####Resimler
 
 <img src="https://github.com/muharremKilicer/emlakSitesi/blob/master/png/emlakSitesi.png" width="200"/>
-<img src="https://github.com/muharremKilicer/emlakSitesi/blob/master/png/anasayfa.png" width="200"/>
-<img src="https://github.com/muharremKilicer/emlakSitesi/blob/master/png/markalar.png" width="200"/>
-<img src="https://github.com/muharremKilicer/emlakSitesi/blob/master/png/markalar2.png" width="200"/>
+<img src="https://github.com/muharremKilicer/emlakSitesi/blob/master/png/emlakSitesiKatalog.png" width="200"/>
+<img src="https://github.com/muharremKilicer/emlakSitesi/blob/master/png/emlakSitesiListe.png" width="200"/>
+<img src="https://github.com/muharremKilicer/emlakSitesi/blob/master/png/emlakSitesiHarita.png" width="200"/>
